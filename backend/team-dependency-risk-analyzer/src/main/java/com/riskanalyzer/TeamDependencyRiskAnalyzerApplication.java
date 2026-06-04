@@ -9,5 +9,4 @@ public class TeamDependencyRiskAnalyzerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TeamDependencyRiskAnalyzerApplication.class, args);
 	}
-
 }
