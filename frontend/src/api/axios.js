@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'http://localhost:8080/api',
+    baseURL: process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080/api',
 });
 
 // Attach JWT token to every request automatically
@@ -13,7 +13,6 @@ API.interceptors.request.use((config) => {
     return config;
 });
 
-// Handle 401 - token expired
 API.interceptors.response.use(
     (response) => response,
     (error) => {
